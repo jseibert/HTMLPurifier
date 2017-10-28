@@ -6,7 +6,6 @@
 
 
 #import <Foundation/Foundation.h>
-#import <Cocoa/Cocoa.h>
 
 #import "HTMLPurifier_URIScheme_data.h"
 #import "../Attributes/HTMLPurifier_URI.h"
@@ -115,7 +114,7 @@
     if (!imageIOS)
         return NO;
 
-#else
+#elsif TARGET_OS_MAC
 
     NSImage* image = [[NSImage alloc] initWithData:raw_data];
 

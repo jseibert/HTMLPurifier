@@ -7,38 +7,38 @@
 /*
  HTML Purifier for PHP 4.6.0 - Standards Compliant HTML Filtering
  Copyright (C) 2006-2008 Edward Z. Yang
- 
+
  HTML Purifier for Objective-c - Standards Compliant HTML Filtering
  Copyright (c) 2014 Mynigma.
- 
+
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
  License as published by the Free Software Foundation; either
  version 2.1 of the License, or (at your option) any later version.
- 
+
  This library is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  Lesser General Public License for more details.
- 
+
  You should have received a copy of the GNU Lesser General Public
  License along with this library; if not, write to the Free Software
  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#import "HTMLPurifier.h"
-#import "../Config & Context/HTMLPurifier_Config.h"
-#import "HTMLPurifier_Strategy_Core.h"
-#import "../Parsing/HTMLPurifier_Generator.h"
-#import "../Config & Context/HTMLPurifier_Context.h"
-#import "HTMLPurifier_Filter.h"
-#import "HTMLPurifier_Lexer.h"
-#import "HTMLPurifier_LanguageFactory.h"
-#import "HTMLPurifier_Language.h"
-#import "HTMLPurifier_ErrorCollector.h"
-#import "../Parsing/HTMLPurifier_IDAccumulator.h"
-#import "../Parsing/HTMLPurifier_Encoder.h"
-#import "../BasicPHP.h"
+#import "./include/HTMLPurifier.h"
+#import "./Config & Context/HTMLPurifier_Config.h"
+#import "./Strategy/HTMLPurifier_Strategy_Core.h"
+#import "./Parsing/HTMLPurifier_Generator.h"
+#import "./Config & Context/HTMLPurifier_Context.h"
+#import "./URIFilter/HTMLPurifier_Filter.h"
+#import "./Parsing/HTMLPurifier_Lexer.h"
+#import "./Errors & Language/HTMLPurifier_LanguageFactory.h"
+#import "./Errors & Language/HTMLPurifier_Language.h"
+#import "./Errors & Language/HTMLPurifier_ErrorCollector.h"
+#import "./Parsing/HTMLPurifier_IDAccumulator.h"
+#import "./Parsing/HTMLPurifier_Encoder.h"
+#import "./BasicPHP.h"
 
 
 
@@ -136,7 +136,7 @@ static HTMLPurifier* theInstance;
  *
  * @param string $html String of HTML to purify
  * default config object specified during this
- * object's construction.  
+ * object's construction.
  *
  * @return string Purified HTML
  */
@@ -150,24 +150,24 @@ static HTMLPurifier* theInstance;
  * Filters an HTML snippet/document to be XSS-free and standards-compliant.
  *
  * @param string $html String of HTML to purify
- * @param HTMLPurifier_Config $config Config object for this operation. 
+ * @param HTMLPurifier_Config $config Config object for this operation.
  *
  * @return string Purified HTML
  */
 - (NSString*)purify:(NSString*)newHtml config:(HTMLPurifier_Config*)newConfig
 {
-    
+
     NSString* html = newHtml;
-    
+
     //Set Config
     config = newConfig?newConfig:[HTMLPurifier_Config createDefault];
-    
+
     //New Lexer with Config
     HTMLPurifier_Lexer* lexer = [HTMLPurifier_Lexer createWithConfig:config];
-    
+
     //New Context
     HTMLPurifier_Context* localContext = [HTMLPurifier_Context new];
-    
+
     //setup HTML generator
     generator = [[HTMLPurifier_Generator alloc] initWithConfig:config context:localContext];
     [localContext registerWithName:@"Generator" ref:generator];
@@ -181,19 +181,19 @@ static HTMLPurifier* theInstance;
         HTMLPurifier_Language* language = [language_factory create:config context:localContext];
         [localContext registerWithName:@"Locale" ref:language];
     }*/
-    
+
     // setup id_accumulator context, necessary due to the fact that AttrValidator can be called from many places
     HTMLPurifier_IDAccumulator* id_accumulator = [HTMLPurifier_IDAccumulator buildWithConfig:config context:localContext];
     [localContext registerWithName:@"IDAccumulator" ref:id_accumulator];
-    
+
     html = [HTMLPurifier_Encoder convertToUTF8:html config:config context:localContext];
-    
+
     // setup filters
-    
+
     NSMutableDictionary* filter_flags = [[config getBatch:@"Filter"] mutableCopy];
     NSMutableArray* custom_filters = [filter_flags objectForKey:@"Custom"];
     [filter_flags removeObjectForKey:@"Custom"];
-    
+
     NSMutableArray* newFilters = [NSMutableArray new];
 
 
@@ -204,11 +204,11 @@ static HTMLPurifier* theInstance;
             //This cannot happen
             continue;
         }
-        
+
         if (strpos(key,@".") != NSNotFound){
             continue;
         }
-        
+
         NSString* class = [@"HTMLPurifier_Filter_" stringByAppendingString:key];
 
         HTMLPurifier_Filter* filter = [NSClassFromString(class) new];
@@ -216,23 +216,23 @@ static HTMLPurifier* theInstance;
         if(filter)
             [newFilters addObject:filter];
     }
-    
+
     for (NSObject* object in custom_filters)
     {
         [newFilters addObject:object];
     }
-    
+
     [newFilters addObjectsFromArray:filters];
-    
+
     NSUInteger filter_size = [newFilters count];
-    
+
     for (int i=0; i<filter_size; i++)
     {
         html = [newFilters[i] preFilter:html config:config context:localContext];
     }
-    
-    
-    
+
+
+
     //TODO maybe change names
     //purifed HTML
 
@@ -241,17 +241,17 @@ static HTMLPurifier* theInstance;
     tokens = [strategy execute:tokens config:config context:localContext];
 
     html = [generator generateFromTokens:tokens];
-    
+
     for (NSInteger i = filter_size - 1; i>=0; i--)
     {
         html = [filters[i] postFilter:html config:config context:localContext];
     }
-    
+
     html = [HTMLPurifier_Encoder convertFromUTF8:html config:config context:localContext];
-    
+
     [(NSMutableArray*)context addObject:localContext];
     return html;
-    
+
 }
 
 /**
@@ -264,9 +264,9 @@ static HTMLPurifier* theInstance;
 - (NSMutableArray*) purifyArray:(NSArray*)array_of_html
 {
     NSMutableArray* context_array = [NSMutableArray new];
-    
+
     NSMutableArray* new_html_array = [NSMutableArray new];
-    
+
     for(NSObject* htmlObject in array_of_html)
     {
         /*if([htmlObject isKindOfClass:[NSDictionary class]])
@@ -303,9 +303,9 @@ static HTMLPurifier* theInstance;
 - (NSMutableArray*) purifyArray:(NSArray*)array_of_html config:(HTMLPurifier_Config*)newConfig
 {
     NSMutableArray* context_array = [NSMutableArray new];
-    
+
     NSMutableArray* new_html_array = [NSMutableArray new];
-    
+
     for(NSString* html in array_of_html)
     {
         [new_html_array addObject: [self purify:html config:newConfig]];

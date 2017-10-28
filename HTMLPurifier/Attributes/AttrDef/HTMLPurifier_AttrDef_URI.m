@@ -14,7 +14,7 @@
 #import "../HTMLPurifier_URI.h"
 #import "../Definition/HTMLPurifier_URIDefinition.h"
 #import "../BasicPHP.h"
-#import "../Attributes/HTMLPurifier_URIParser.h".h"
+#import "../Attributes/HTMLPurifier_URIParser.h"
 #import "../URIScheme/HTMLPurifier_URIScheme.h"
 
 //#import "../URIScheme/HTMLPurifier_URIScheme.h"
