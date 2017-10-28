@@ -15,7 +15,8 @@
 
 @property NSMutableDictionary* info;
 
-
+- (id)initWithURL:(NSURL *)url;
+    
 + (HTMLPurifier_ConfigSchema*)singleton;
 
 

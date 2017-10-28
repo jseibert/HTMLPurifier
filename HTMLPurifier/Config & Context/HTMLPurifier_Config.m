@@ -49,6 +49,30 @@ static HTMLPurifier_URIDefinition* theURIDefinition;
 {
     return [self initWithDefinition:nil parent:nil];
 }
+    
+    - (id)initWithConfigURL:(NSURL *)url
+    {
+        self = [super init];
+        if (self) {
+            _auto_finalize = YES;
+            _chatty = YES;
+            
+            definitions = [NSMutableDictionary new];
+            
+            plist = [[HTMLPurifier_PropertyList alloc] initWithURL:url];
+            
+            if(!theDefinition)
+                theDefinition = [[HTMLPurifier_ConfigSchema alloc] initWithURL:url];
+            
+            _def = theDefinition;
+        
+            if(!theParser)
+                theParser = [HTMLPurifier_VarParser_Flexible new];
+            
+            parser = theParser;
+        }
+        return self;
+    }
 
 
 - (id)initWithDefinition:(HTMLPurifier_ConfigSchema*)definition parent:(HTMLPurifier_PropertyList*)newParent

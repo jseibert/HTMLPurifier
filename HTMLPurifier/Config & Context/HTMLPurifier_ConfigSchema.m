@@ -139,27 +139,40 @@ static HTMLPurifier_ConfigSchema* theSingleton;
     if (self) {
         _defaults = [NSMutableDictionary new];
         
-        [self actuallyReadPlist];
+        //check for a user-defined config first
+        NSURL* configPlistPath = [[NSBundle mainBundle] URLForResource:@"HTMLPurifierCustomConfig" withExtension:@"plist"];
+        if(!configPlistPath)
+        configPlistPath = [BUNDLE URLForResource:@"HTMLPurifierConfig" withExtension:@"plist"];
+        
+        if(!configPlistPath)
+        {
+            NSLog(@"Error opening config plist file!!! Please include either 'HTMLPurifierCustomConfig.plist' in main bundle or 'HTMLPurifierConfig.plist' in bundle: %@", [NSBundle bundleForClass:[self class]]);
+            return;
+        }
+        
+        [self actuallyReadPlist: configPlistPath];
         
         theSingleton = self;
     }
     return self;
 }
-
-- (void)actuallyReadPlist
-{
-    //check for a user-defined config first
-    NSURL* configPlistPath = [[NSBundle mainBundle] URLForResource:@"HTMLPurifierCustomConfig" withExtension:@"plist"];
-    if(!configPlistPath)
-        configPlistPath = [BUNDLE URLForResource:@"HTMLPurifierConfig" withExtension:@"plist"];
     
-    if(!configPlistPath)
+    - (id)initWithURL:(NSURL *)url
     {
-        NSLog(@"Error opening config plist file!!! Please include either 'HTMLPurifierCustomConfig.plist' in main bundle or 'HTMLPurifierConfig.plist' in bundle: %@", [NSBundle bundleForClass:[self class]]);
-        return;
+        self = [super init];
+        if (self) {
+            _defaults = [NSMutableDictionary new];
+            
+            [self actuallyReadPlist: url];
+            
+            theSingleton = self;
+        }
+        return self;
     }
-    
-    NSDictionary* configDict = [NSDictionary dictionaryWithContentsOfURL:configPlistPath];
+
+    - (void)actuallyReadPlist:(NSURL *)url
+{
+    NSDictionary* configDict = [NSDictionary dictionaryWithContentsOfURL:url];
     
     [self setDefaultPList:configDict[@"defaultPlist"]];
     [self setInfo:[configDict[@"info"] mutableCopy]];

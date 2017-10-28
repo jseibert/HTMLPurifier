@@ -32,6 +32,7 @@
 }
 
 - (id)initWithParent:(HTMLPurifier_PropertyList*)parentPlist;
+- (id)initWithURL:(NSURL *)url;
 - (id)init;
 
 /**

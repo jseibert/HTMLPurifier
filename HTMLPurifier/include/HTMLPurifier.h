@@ -62,6 +62,7 @@
 @property NSObject* context;
 
 - (id)initWithConfig:(HTMLPurifier_Config*) newConfig;
+- (id)initWithConfigURL:(NSURL *)url;
 
 - (NSString*) purify:(NSString*)newHtml;
 

@@ -37,25 +37,37 @@
     self = [super init];
     if (self) {
         parent = parentPlist;
-        [self actuallyReadPlist];
+        
+        //check for a user-defined config first
+        NSURL* configPlistPath = [[NSBundle mainBundle] URLForResource:@"HTMLPurifierCustomConfig" withExtension:@"plist"];
+        if(!configPlistPath)
+        configPlistPath = [BUNDLE URLForResource:@"HTMLPurifierConfig" withExtension:@"plist"];
+        
+        if(!configPlistPath)
+        {
+            NSLog(@"Error opening config plist file!!! Please include either 'HTMLPurifierCustomConfig.plist' in main bundle or 'HTMLPurifierConfig.plist' in bundle: %@", [NSBundle bundleForClass:[self class]]);
+            return;
+        }
+        
+        [self actuallyReadPlist:configPlistPath];
     }
     return self;
 }
-
-- (void)actuallyReadPlist
-{
-    //check for a user-defined config first
-    NSURL* configPlistPath = [[NSBundle mainBundle] URLForResource:@"HTMLPurifierCustomConfig" withExtension:@"plist"];
-    if(!configPlistPath)
-        configPlistPath = [BUNDLE URLForResource:@"HTMLPurifierConfig" withExtension:@"plist"];
     
-    if(!configPlistPath)
+    - (id)initWithURL:(NSURL *)url
     {
-        NSLog(@"Error opening config plist file!!! Please include either 'HTMLPurifierCustomConfig.plist' in main bundle or 'HTMLPurifierConfig.plist' in bundle: %@", [NSBundle bundleForClass:[self class]]);
-        return;
+        self = [super init];
+        if (self) {
+            parent = nil;
+            
+            [self actuallyReadPlist:url];
+        }
+        return self;
     }
 
-    data = [[[NSDictionary dictionaryWithContentsOfURL:configPlistPath] objectForKey:@"defaultPlist"] mutableCopy];
+- (void)actuallyReadPlist:(NSURL *)url
+{
+    data = [[[NSDictionary dictionaryWithContentsOfURL:url] objectForKey:@"defaultPlist"] mutableCopy];
 }
 
 

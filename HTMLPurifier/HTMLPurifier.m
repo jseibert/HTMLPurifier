@@ -113,6 +113,17 @@ static HTMLPurifier* theInstance;
     }
     return self;
 }
+    
+    - (id)initWithConfigURL:(NSURL *)url
+    {
+        self = [super init];
+        if (self) {
+            config = [[HTMLPurifier_Config alloc] initWithConfigURL:url];
+            strategy = [HTMLPurifier_Strategy_Core new];
+            context = [NSMutableArray new];
+        }
+        return self;
+    }
 
 - (id) init
 {
@@ -142,7 +153,7 @@ static HTMLPurifier* theInstance;
  */
 - (NSString*) purify:(NSString*)newHtml
 {
-    return [self purify:newHtml config:nil];
+    return [self purify:newHtml config:self.config];
 }
 
 

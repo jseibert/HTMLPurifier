@@ -37,6 +37,7 @@
 
 //- (HTMLPurifier_ConfigSchema*)definition;
 
+- (id)initWithConfigURL:(NSURL *)url;
 
 - (id)initWithDefinition:(HTMLPurifier_ConfigSchema*)definition parent:(HTMLPurifier_PropertyList*)newParent;
 
