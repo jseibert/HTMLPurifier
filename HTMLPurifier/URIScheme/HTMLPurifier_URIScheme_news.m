@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_URIScheme_news.h"
-#import "HTMLPurifier_URI.h"
+#import "../Attributes/HTMLPurifier_URI.h"
 
 /**
  * Validates news (Usenet) as defined by generic RFC 1738

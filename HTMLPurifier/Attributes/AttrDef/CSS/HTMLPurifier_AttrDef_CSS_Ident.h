@@ -9,7 +9,7 @@
  * Validates based on {ident} CSS grammar production
  */
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @interface HTMLPurifier_AttrDef_CSS_Ident : HTMLPurifier_AttrDef
 

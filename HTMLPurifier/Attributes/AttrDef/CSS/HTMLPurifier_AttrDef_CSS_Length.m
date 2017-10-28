@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrDef_CSS_Length.h"
-#import "HTMLPurifier_Length.h"
+#import "../../HTMLPurifier_Length.h"
 
 @implementation HTMLPurifier_AttrDef_CSS_Length
 

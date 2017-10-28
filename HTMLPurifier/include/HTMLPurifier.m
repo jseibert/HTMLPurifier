@@ -27,18 +27,18 @@
  */
 
 #import "HTMLPurifier.h"
-#import "HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 #import "HTMLPurifier_Strategy_Core.h"
-#import "HTMLPurifier_Generator.h"
-#import "HTMLPurifier_Context.h"
+#import "../Parsing/HTMLPurifier_Generator.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 #import "HTMLPurifier_Filter.h"
 #import "HTMLPurifier_Lexer.h"
 #import "HTMLPurifier_LanguageFactory.h"
 #import "HTMLPurifier_Language.h"
 #import "HTMLPurifier_ErrorCollector.h"
-#import "HTMLPurifier_IDAccumulator.h"
-#import "HTMLPurifier_Encoder.h"
-#import "BasicPHP.h"
+#import "../Parsing/HTMLPurifier_IDAccumulator.h"
+#import "../Parsing/HTMLPurifier_Encoder.h"
+#import "../BasicPHP.h"
 
 
 

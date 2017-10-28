@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_AttrDef.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Encoder.h"
+#import "../BasicPHP.h"
+#import "../../Parsing/HTMLPurifier_Encoder.h"
 
 @implementation HTMLPurifier_AttrDef
 

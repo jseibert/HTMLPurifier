@@ -5,7 +5,7 @@
 //  Created by Roman Priebe on 14.01.14.
 
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 /**
  * Validates shorthand CSS property font.

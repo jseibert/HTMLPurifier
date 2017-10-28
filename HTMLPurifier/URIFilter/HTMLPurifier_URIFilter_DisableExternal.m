@@ -6,10 +6,10 @@
 
 
 #import "HTMLPurifier_URIFilter_DisableExternal.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_URI.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_URIDefinition.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../BasicPHP.h"
+#import "../Definition/HTMLPurifier_URIDefinition.h"
 
 @implementation HTMLPurifier_URIFilter_DisableExternal
 

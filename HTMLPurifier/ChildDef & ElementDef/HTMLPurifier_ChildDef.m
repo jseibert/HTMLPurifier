@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_ChildDef.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 /**
  * Defines allowed child nodes and validates nodes against it.

@@ -6,12 +6,12 @@
 
 
 #import "HTMLPurifier_AttrCollections.h"
-#import "HTMLPurifier_HTMLModule.h"
-#import "BasicPHP.h"
+#import "../HTMLModule/HTMLPurifier_HTMLModule.h"
+#import "../BasicPHP.h"
 #import "HTMLPurifier_AttrTypes.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_AttrDef.h"
-#import "HTMLPurifier_AttrDef_HTML_LinkTypes.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "./AttrDef/HTMLPurifier_AttrDef.h"
+#import "./AttrDef/HTML/HTMLPurifier_AttrDef_HTML_LinkTypes.h"
 
 
 /**

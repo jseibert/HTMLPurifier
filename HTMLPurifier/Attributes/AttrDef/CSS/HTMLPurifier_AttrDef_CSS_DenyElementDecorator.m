@@ -10,7 +10,7 @@
  */
 
 #import "HTMLPurifier_AttrDef_CSS_DenyElementDecorator.h"
-#import "HTMLPurifier_Token.h"
+#import "../Token/HTMLPurifier_Token.h"
 
 @implementation HTMLPurifier_AttrDef_CSS_DenyElementDecorator
 

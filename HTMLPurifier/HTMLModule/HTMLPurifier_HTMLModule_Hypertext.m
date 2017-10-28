@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_HTMLModule_Hypertext.h"
-#import "HTMLPurifier_AttrDef_HTML_LinkTypes.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_Config.h"
+#import "../Attributes/AttrDef/HTML/HTMLPurifier_AttrDef_HTML_LinkTypes.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 
 @implementation HTMLPurifier_HTMLModule_Hypertext
 

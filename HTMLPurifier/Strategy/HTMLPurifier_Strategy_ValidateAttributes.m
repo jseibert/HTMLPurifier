@@ -6,11 +6,11 @@
 
 
 #import "HTMLPurifier_Strategy_ValidateAttributes.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_Token_Empty.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_AttrValidator.h"
-#import "HTMLPurifier_Context.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Token/HTMLPurifier_Token_Empty.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Attributes/HTMLPurifier_AttrValidator.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 @implementation HTMLPurifier_Strategy_ValidateAttributes
 

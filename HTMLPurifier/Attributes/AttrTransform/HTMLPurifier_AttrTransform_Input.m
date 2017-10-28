@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrTransform_Input.h"
-#import "HTMLPurifier_AttrDef_HTML_Pixels.h"
+#import "../AttrDef/HTML/HTMLPurifier_AttrDef_HTML_Pixels.h"
 
 /**
  * Performs miscellaneous cross attribute validation and filtering for

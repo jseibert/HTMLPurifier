@@ -9,8 +9,8 @@
  * Validates a host according to the IPv4, IPv6 and DNS (future) specifications.
  */
 #import "HTMLPurifier_AttrDef_URI_Host.h"
-#import "HTMLPurifier_Config.h"
-#import "BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_URI_Host
 

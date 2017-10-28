@@ -9,7 +9,7 @@
  * Decorator which enables !important to be used in CSS values.
  */
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @interface HTMLPurifier_AttrDef_CSS_ImportantDecorator : HTMLPurifier_AttrDef
 

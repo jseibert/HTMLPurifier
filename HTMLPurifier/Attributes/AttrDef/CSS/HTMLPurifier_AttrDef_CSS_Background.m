@@ -6,10 +6,10 @@
 
 
 #import "HTMLPurifier_AttrDef_CSS_Background.h"
-#import "HTMLPurifier_CSSDefinition.h"
-#import "HTMLPurifier_Config.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_AttrDef.h"
+#import "../../../Definition/HTMLPurifier_CSSDefinition.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../BasicPHP.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @implementation HTMLPurifier_AttrDef_CSS_Background
 

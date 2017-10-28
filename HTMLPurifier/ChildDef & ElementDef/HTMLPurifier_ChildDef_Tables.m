@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_ChildDef_Tables.h"
-#import "HTMLPurifier_Node.h"
-#import "HTMLPurifier_Node_Comment.h"
-#import "HTMLPurifier_Node_Element.h"
+#import "../Node/HTMLPurifier_Node.h"
+#import "../Node/HTMLPurifier_Node_Comment.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
 
 
 /**

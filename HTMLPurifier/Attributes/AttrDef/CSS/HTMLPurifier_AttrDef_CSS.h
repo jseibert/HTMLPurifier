@@ -18,7 +18,7 @@
  *       filtering solution.
  */
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @interface HTMLPurifier_AttrDef_CSS : HTMLPurifier_AttrDef
 

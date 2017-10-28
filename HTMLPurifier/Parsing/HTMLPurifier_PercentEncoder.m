@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_PercentEncoder.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_PercentEncoder
 

@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrTransform_BdoDir.h"
-#import "HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 
 // this MUST be placed in post, as it assumes that any value in dir is valid
 

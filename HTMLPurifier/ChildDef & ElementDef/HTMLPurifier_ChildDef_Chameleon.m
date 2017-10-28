@@ -7,8 +7,8 @@
 
 #import "HTMLPurifier_ChildDef_Chameleon.h"
 #import "HTMLPurifier_ChildDef_Optional.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 
 @implementation HTMLPurifier_ChildDef_Chameleon

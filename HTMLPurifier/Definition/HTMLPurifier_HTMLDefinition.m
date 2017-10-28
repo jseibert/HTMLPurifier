@@ -6,12 +6,12 @@
 
 
 #import "HTMLPurifier_HTMLDefinition.h"
-#import "HTMLPurifier_HTMLModule.h"
-#import "HTMLPurifier_HTMLModuleManager.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_ContentSets.h"
-#import "BasicPHP.h"
+#import "../HTMLModule/HTMLPurifier_HTMLModule.h"
+#import "../HTMLModule/HTMLPurifier_HTMLModuleManager.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_ContentSets.h"
+#import "../BasicPHP.h"
 
 
 @implementation HTMLPurifier_HTMLDefinition

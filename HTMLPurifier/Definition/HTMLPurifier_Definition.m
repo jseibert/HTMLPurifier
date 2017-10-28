@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Definition.h"
-#import "HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 
 @implementation HTMLPurifier_Definition
 

@@ -6,15 +6,15 @@
 
 
 #import "HTMLPurifier_Arborize.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_Token_End.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Definition.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_HTMLDefinition.h"
-#import "HTMLPurifier_Node_Element.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_End.h"
+#import "../BasicPHP.h"
+#import "../Definition/HTMLPurifier_Definition.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Definition/HTMLPurifier_HTMLDefinition.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
 #import "HTMLPurifier_Queue.h"
 
 @implementation HTMLPurifier_Arborize

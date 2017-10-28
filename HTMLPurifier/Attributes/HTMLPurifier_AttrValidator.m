@@ -6,17 +6,17 @@
 
 
 #import "HTMLPurifier_AttrValidator.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_HTMLDefinition.h"
-#import "HTMLPurifier_IDAccumulator.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_Token_Empty.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_AttrDef.h"
-#import "HTMLPurifier_AttrTransform.h"
-#import "BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Definition/HTMLPurifier_HTMLDefinition.h"
+#import "../Parsing/HTMLPurifier_IDAccumulator.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_Empty.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "./AttrDef/HTMLPurifier_AttrDef.h"
+#import "./AttrTransform/HTMLPurifier_AttrTransform.h"
+#import "../BasicPHP.h"
 
 
 @implementation HTMLPurifier_AttrValidator

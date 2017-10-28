@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_AttrTransform.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 /**
  * Processes an entire attribute array for corrections needing multiple values.

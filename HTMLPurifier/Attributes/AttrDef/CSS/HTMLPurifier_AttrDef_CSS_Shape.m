@@ -7,11 +7,11 @@
 //
 
 #import "HTMLPurifier_AttrDef_CSS_Shape.h"
-#import "HTMLPurifier_CSSDefinition.h"
-#import "BasicPHP.h"
+#import "../../../Definition/HTMLPurifier_CSSDefinition.h"
+#import "../BasicPHP.h"
 #import "HTMLPurifier_AttrDef_CSS_Composite.h"
 #import "HTMLPurifier_AttrDef_CSS_Length.h"
-#import "HTMLPurifier_AttrDef_Enum.h"
+#import "../HTMLPurifier_AttrDef_Enum.h"
 
 @implementation HTMLPurifier_AttrDef_CSS_Shape
 

@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrTransform_Length.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 /**
  * Class for handling width/height length attribute transformations to CSS

@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_AttrDef_CSS_ListStyle.h"
-#import "HTMLPurifier_CSSDefinition.h"
-#import "BasicPHP.h"
+#import "../../../Definition/HTMLPurifier_CSSDefinition.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_CSS_ListStyle
 

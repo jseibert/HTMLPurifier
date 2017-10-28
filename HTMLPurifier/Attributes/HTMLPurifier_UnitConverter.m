@@ -7,7 +7,7 @@
 
 #import "HTMLPurifier_UnitConverter.h"
 #import "HTMLPurifier_Length.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 #define ENGLISH @1
 #define METRIC @2

@@ -6,11 +6,11 @@
 
 
 #import "HTMLPurifier_TagTransform_Simple.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_Token_Tag.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_Token_Empty.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Token/HTMLPurifier_Token_Tag.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_Empty.h"
 
 @implementation HTMLPurifier_TagTransform_Simple
 

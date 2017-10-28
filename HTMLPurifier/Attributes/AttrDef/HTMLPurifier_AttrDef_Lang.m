@@ -11,7 +11,7 @@
  */
 
 #import "HTMLPurifier_AttrDef_Lang.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_Lang
 

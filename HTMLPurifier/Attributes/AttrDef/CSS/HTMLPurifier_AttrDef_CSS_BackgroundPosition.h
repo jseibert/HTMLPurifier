@@ -5,7 +5,7 @@
 //  Created by Roman Priebe on 10.01.14.
 
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @class HTMLPurifier_AttrDef_CSS_Length, HTMLPurifier_AttrDef_CSS_Percentage;
 

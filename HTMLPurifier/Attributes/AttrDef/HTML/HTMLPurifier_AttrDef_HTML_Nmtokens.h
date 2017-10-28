@@ -6,7 +6,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 
 /**

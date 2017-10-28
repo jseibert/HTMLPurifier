@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_Strategy_Composite.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 /**
  * Composite strategy that runs multiple strategies on tokens.

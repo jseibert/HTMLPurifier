@@ -11,7 +11,7 @@
  */
 
 #import "HTMLPurifier_AttrDef_URI_IPv4.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_URI_IPv4
 

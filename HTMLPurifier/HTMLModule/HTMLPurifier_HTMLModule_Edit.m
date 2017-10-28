@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_HTMLModule_Edit.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_ChildDef_Chameleon.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../BasicPHP.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef_Chameleon.h"
 
 
 /**

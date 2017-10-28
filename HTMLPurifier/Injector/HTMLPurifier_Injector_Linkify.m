@@ -6,11 +6,11 @@
 
 
 #import "HTMLPurifier_Injector_Linkify.h"
-#import "HTMLPurifier_Token_Text.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_Token_End.h"
-#import "BasicPHP.h"
+#import "../Token/HTMLPurifier_Token_Text.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_End.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_Injector_Linkify
 

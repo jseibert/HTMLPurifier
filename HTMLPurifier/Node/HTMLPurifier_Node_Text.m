@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Node_Text.h"
-#import "HTMLPurifier_Token_Text.h"
+#import "../Token/HTMLPurifier_Token_Text.h"
 
 @implementation HTMLPurifier_Node_Text
 

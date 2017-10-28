@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_TagTransform_Font.h"
-#import "HTMLPurifier_Token_Tag.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
+#import "../Token/HTMLPurifier_Token_Tag.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 @implementation HTMLPurifier_TagTransform_Font
 

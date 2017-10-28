@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_URIScheme_ftp.h"
-#import "HTMLPurifier_URI.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_PercentEncoder.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../BasicPHP.h"
+#import "../Parsing/HTMLPurifier_PercentEncoder.h"
 
 /**
  * Validates ftp (File Transfer Protocol) URIs as defined by generic RFC 1738.
@@ -34,13 +34,13 @@
 -(BOOL) doValidate:(HTMLPurifier_URI*)uri config:(HTMLPurifier_Config*)config context:(HTMLPurifier_Context*)context
 {
     [uri setQuery:nil];
-    
+
     // typecode check
     NSInteger semicolon_pos = strrpos([uri path], @";"); // reverse
-    
+
     if (semicolon_pos != NSNotFound)
     {
-    
+
         NSString* type;
         if ([[uri path] length] > semicolon_pos + 1)
             type = [[uri path] substringFromIndex:semicolon_pos + 1]; // no semicolon

@@ -6,17 +6,17 @@
 
 
 #import "HTMLPurifier_Strategy_FixNesting.h"
-#import "HTMLPurifier_Arborize.h"
-#import "HTMLPurifier_Node.h"
-#import "HTMLPurifier_Definition.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Token.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_HTMLDefinition.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_Node_Element.h"
-#import "HTMLPurifier_ChildDef.h"
+#import "../Parsing/HTMLPurifier_Arborize.h"
+#import "../Node/HTMLPurifier_Node.h"
+#import "../Definition/HTMLPurifier_Definition.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Definition/HTMLPurifier_HTMLDefinition.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef.h"
 
 
 @implementation HTMLPurifier_Strategy_FixNesting

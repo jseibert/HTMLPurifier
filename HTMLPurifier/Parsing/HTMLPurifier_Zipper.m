@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Zipper.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_Zipper
 

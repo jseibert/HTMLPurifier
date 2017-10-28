@@ -6,11 +6,11 @@
 
 
 #import "HTMLPurifier_ChildDef_Required.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Node.h"
-#import "HTMLPurifier_Node_Text.h"
-#import "HTMLPurifier_Node_Element.h"
-#import "HTMLPurifier_Node_Comment.h"
+#import "../BasicPHP.h"
+#import "../Node/HTMLPurifier_Node.h"
+#import "../Node/HTMLPurifier_Node_Text.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
+#import "../Node/HTMLPurifier_Node_Comment.h"
 
 @implementation HTMLPurifier_ChildDef_Required
 

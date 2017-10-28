@@ -11,13 +11,13 @@
  * @note Scheme-specific mechanics deferred to HTMLPurifier_URIScheme
  */
 #import "HTMLPurifier_AttrDef_URI.h"
-#import "HTMLPurifier_URI.h"
-#import "HTMLPurifier_URIDefinition.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_URIParser.h"
-#import "HTMLPurifier_URIScheme.h"
+#import "../HTMLPurifier_URI.h"
+#import "../Definition/HTMLPurifier_URIDefinition.h"
+#import "../BasicPHP.h"
+#import "../Attributes/HTMLPurifier_URIParser.h".h"
+#import "../URIScheme/HTMLPurifier_URIScheme.h"
 
-//#import "HTMLPurifier_URIScheme.h"
+//#import "../URIScheme/HTMLPurifier_URIScheme.h"
 
 
 @implementation HTMLPurifier_AttrDef_URI
@@ -78,28 +78,28 @@
     {
         return nil;
     }
-    
+
     uri = [super parseCDATAWithString:uri];
-    
+
     // parse the URI
     HTMLPurifier_URI* newUri = [parser parse:uri];
     if (!newUri)
     {
         return nil;
     }
-    
+
     // add embedded flag to context for validators
     [context registerWithName:@"EmbeddedURI" ref:embedsResource];
-    
+
     BOOL ok = NO;
     do {
-        
+
         // generic validation
         if (![newUri validateWithConfig:config context:context])
         {
             break;
         }
-        
+
         // chained filtering
         HTMLPurifier_URIDefinition* uri_def = (HTMLPurifier_URIDefinition*)[config getDefinition:@"URI"];
         BOOL result_bool = [uri_def filter:&newUri config:config context:context];
@@ -107,10 +107,10 @@
         {
             break;
         }
-     
+
         // scheme-specific validation
         HTMLPurifier_URIScheme* scheme_obj = [newUri getSchemeObj:config context:context];
-        
+
         if (!scheme_obj)
         {
             break;
@@ -124,19 +124,19 @@
         {
             break;
         }
-        
+
         // Post chained filtering
         result_bool = [uri_def postFilter:&newUri config:config context:context];
         if (!result_bool)
         {
             break;
         }
-        
+
         // survived gauntlet
         ok = YES;
 
     } while (NO);
-    
+
     [context destroy:@"EmbeddedURI"];
     if (!ok)
     {
@@ -144,7 +144,7 @@
     }
     // back to string
     return [newUri toString];
-    
+
 }
 
 

@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_URIScheme_mailto.h"
-#import "HTMLPurifier_URI.h"
-#import "BasicPHP.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../BasicPHP.h"
 
 // VERY RELAXED! Shouldn't cause problems, not even Firefox checks if the
 // email is valid, but be careful!

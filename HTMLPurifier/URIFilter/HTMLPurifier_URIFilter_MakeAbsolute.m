@@ -6,12 +6,12 @@
 
 
 #import "HTMLPurifier_URIFilter_MakeAbsolute.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_URIDefinition.h"
-#import "HTMLPurifier_URI.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_URIScheme.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Definition/HTMLPurifier_URIDefinition.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../BasicPHP.h"
+#import "../URIScheme/HTMLPurifier_URIScheme.h"
 
 @implementation HTMLPurifier_URIFilter_MakeAbsolute
 

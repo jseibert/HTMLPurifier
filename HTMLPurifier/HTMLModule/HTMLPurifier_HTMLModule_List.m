@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_HTMLModule_List.h"
-#import "HTMLPurifier_ChildDef_List.h"
-#import "HTMLPurifier_ElementDef.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef_List.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
 
 /**
  * XHTML 1.1 List Module, defines list-oriented elements. Core Module.

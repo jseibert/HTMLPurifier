@@ -6,10 +6,10 @@
 
 
 #import "HTMLPurifier_HTMLModule.h"
-#import "HTMLPurifier_ChildDef.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_AttrDef.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../BasicPHP.h"
+#import "../Attributes/AttrDef/HTMLPurifier_AttrDef.h"
 
 @implementation HTMLPurifier_HTMLModule
 

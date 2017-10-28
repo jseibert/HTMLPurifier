@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Token_Tag.h"
-#import "HTMLPurifier_Node_Element.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
 
 @implementation HTMLPurifier_Token_Tag
 

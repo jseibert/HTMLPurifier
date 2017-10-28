@@ -7,11 +7,11 @@
 
 #import "HTMLPurifier_Token.h"
 #import "HTMLPurifier.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Node.h"
+#import "../BasicPHP.h"
+#import "../Node/HTMLPurifier_Node.h"
 #import "HTMLPurifier_Token_Empty.h"
 #import "HTMLPurifier_Token_End.h"
-#import "HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
 #import "HTMLPurifier_Token_Comment.h"
 #import "HTMLPurifier_Token_Text.h"
 

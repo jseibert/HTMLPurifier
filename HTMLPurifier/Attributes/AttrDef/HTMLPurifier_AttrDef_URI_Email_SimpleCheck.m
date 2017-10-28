@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrDef_URI_Email_SimpleCheck.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_URI_Email_SimpleCheck
 

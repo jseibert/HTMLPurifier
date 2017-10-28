@@ -5,7 +5,7 @@
 //  Created by Lukas Neumann on 11.01.14.
 
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 /**
  * Validates an integer representation of pixels according to the HTML spec.

@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_URIFilter_HostBlacklist.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_URI.h"
-#import "BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_URIFilter_HostBlacklist
 

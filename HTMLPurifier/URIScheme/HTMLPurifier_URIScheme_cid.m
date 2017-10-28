@@ -5,8 +5,8 @@
 //  Created by Lukas Neumann on 14.02.14.
 
 #import "HTMLPurifier_URIScheme_cid.h"
-#import "HTMLPurifier_URI.h"
-#import "BasicPHP.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../BasicPHP.h"
 
 
 /** 

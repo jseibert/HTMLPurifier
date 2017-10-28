@@ -6,31 +6,30 @@
 
 
 #import "HTMLPurifier_CSSDefinition.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_AttrDef_Enum.h"
-#import "HTMLPurifier_AttrDef_CSS_Multiple.h"
-#import "HTMLPurifier_AttrDef_CSS_Composite.h"
-#import "HTMLPurifier_AttrDef_CSS_Background.h"
-#import "HTMLPurifier_AttrDef_CSS_BackgroundPosition.h"
-#import "HTMLPurifier_AttrDef_CSS_Border.h"
-#import "HTMLPurifier_AttrDef_CSS_Percentage.h"
-#import "HTMLPurifier_AttrDef_CSS_URI.h"
-#import "HTMLPurifier_AttrDef_CSS_ListStyle.h"
-#import "HTMLPurifier_AttrDef_CSS_Color.h"
-#import "HTMLPurifier_AttrDef_CSS_Number.h"
-#import "HTMLPurifier_AttrDef_CSS_Length.h"
-#import "HTMLPurifier_AttrDef_Switch.h"
-#import "HTMLPurifier_AttrDef_CSS_TextDecoration.h"
-#import "HTMLPurifier_AttrDef_CSS_URI.h"
-#import "HTMLPurifier_AttrDef_CSS_FontFamily.h"
-#import "HTMLPurifier_AttrDef_CSS_Font.h"
-#import "HTMLPurifier_AttrDef_CSS_ImportantDecorator.h"
-#import "HTMLPurifier_AttrDef_CSS_Shape.h"
-#import "HTMLPurifier_AttrDef_CSS_AlphaValue.h"
-#import "HTMLPurifier_AttrDef_Integer.h"
-#import "HTMLPurifier_AttrDef_CSS_Outline.h"
-#import "HTMLPurifier_AttrDef_CSS_BorderRadius.h"
-#import "BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Attributes/AttrDef/HTMLPurifier_AttrDef_Enum.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Multiple.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Composite.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Background.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_BackgroundPosition.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Border.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Percentage.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_URI.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_ListStyle.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Color.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Number.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Length.h"
+#import "../Attributes/AttrDef/HTMLPurifier_AttrDef_Switch.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_TextDecoration.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_FontFamily.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Font.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_ImportantDecorator.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Shape.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_AlphaValue.h"
+#import "../Attributes/AttrDef/HTMLPurifier_AttrDef_Integer.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Outline.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS_BorderRadius.h"
+#import "../BasicPHP.h"
 
 
 @implementation HTMLPurifier_CSSDefinition
@@ -52,17 +51,17 @@
      * Last updated: 12.08.2015
      * Source: http://www.w3.org/TR/CSS/
      **/
-    
+
     // background-attachment
     HTMLPurifier_AttrDef_Enum* scroll_fixed = [[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"scroll",@"fixed"] caseSensitive:NO];
     [self.info setObject:scroll_fixed forKey:@"background-attachment"];
-    
+
     // background-color
     HTMLPurifier_AttrDef_CSS_Color* color = [HTMLPurifier_AttrDef_CSS_Color new];
     HTMLPurifier_AttrDef_Enum* transparent = [[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"transparent"]];
     HTMLPurifier_AttrDef_CSS_Composite* color_or_transparent = [[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[transparent, color]];
     [self.info setObject:color_or_transparent forKey:@"background-color"];
-    
+
     // background-image
     HTMLPurifier_AttrDef_CSS_URI* uri = [HTMLPurifier_AttrDef_CSS_URI new];
     HTMLPurifier_AttrDef_Enum* none = [[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"none"] caseSensitive:NO];
@@ -77,20 +76,20 @@
 
     // background
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Background alloc] initWithConfig:config] forKey:@"background"];
-    
+
     // border-collapse
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"collapse", @"separate"]] forKey:@"border-collapse"];
-    
+
     // border-color
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Multiple alloc] initWithSingle:color_or_transparent] forKey:@"border-color"];
-    
+
     // border-top-left-radius border-top-right-radius border-bottom-left-radius border-bottom-right-radius
     HTMLPurifier_AttrDef_CSS_Composite* border_radius = [[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"initial"]],[[HTMLPurifier_AttrDef_CSS_Multiple alloc] initWithSingle:[HTMLPurifier_AttrDef_CSS_Length new] max:2],[[HTMLPurifier_AttrDef_CSS_Multiple alloc] initWithSingle:[HTMLPurifier_AttrDef_CSS_Percentage new] max:2]]];
     [self.info setObject:border_radius forKey:@"border-top-left-radius"];
     [self.info setObject:border_radius forKey:@"border-top-right-radius"];
     [self.info setObject:border_radius forKey:@"border-bottom-right-radius"];
     [self.info setObject:border_radius forKey:@"border-bottom-left-radius"];
-    
+
     // border-radius
     [self.info setObject:[HTMLPurifier_AttrDef_CSS_BorderRadius new] forKey:@"border-radius"];
 
@@ -106,13 +105,13 @@
     [self.info setObject:color_or_transparent forKey:@"border-bottom-color"];
     [self.info setObject:color_or_transparent forKey:@"border-left-color"];
     [self.info setObject:color_or_transparent forKey:@"border-right-color"];
-    
+
     // border-top-style border-right-style border-bottom-style border-left-style
     [self.info setObject:border_style forKey:@"border-bottom-style"];
     [self.info setObject:border_style forKey:@"border-right-style"];
     [self.info setObject:border_style forKey:@"border-left-style"];
     [self.info setObject:border_style forKey:@"border-top-style"];
-    
+
     // border-top-width border-right-width border-bottom-width border-left-width
     HTMLPurifier_AttrDef_CSS_Composite* border_width = [[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"thin", @"medium", @"thick"]], [[HTMLPurifier_AttrDef_CSS_Length alloc] initWithMin:@"0"]]];
     [self.info setObject:border_width forKey:@"border-top-width"];
@@ -122,14 +121,14 @@
 
     // border-width
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Multiple alloc] initWithSingle:border_width] forKey:@"border-width"];
-    
+
     // border-top border-right border-bottom border-left
     HTMLPurifier_AttrDef_CSS_Border* border = [[HTMLPurifier_AttrDef_CSS_Border alloc] initWithConfig:config];
     [self.info setObject:border forKey:@"border-bottom"];
     [self.info setObject:border forKey:@"border-top"];
     [self.info setObject:border forKey:@"border-left"];
     [self.info setObject:border forKey:@"border-right"];
-    
+
     // border
     [self.info setObject:border forKey:@"border"];
 
@@ -147,7 +146,7 @@
     // clip
     HTMLPurifier_AttrDef_CSS_Shape* shape = [HTMLPurifier_AttrDef_CSS_Shape new];
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[shape,_auto]] forKey:@"clip"];
-    
+
     // color
     [self.info setObject:[HTMLPurifier_AttrDef_CSS_Color new] forKey:@"color"];
 
@@ -155,10 +154,10 @@
 
     // counter-increment
     //[ <identifier> <integer>? ]+ | none
-    
+
     // counter-reset
     //[ <identifier> <integer>? ]+ | none
-    
+
     // curser
     NSArray* cursers = @[@"auto",@"crosshair",@"default",@"pointer",@"move",@"e-resize",@"ne-resize",@"nw-resize",@"n-resize",@"se-resize",@"sw-resize",@"s-resize",@"w-resize",@"text",@"wait",@"help",@"progress"];
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[uri,[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:cursers]]] forKey:@"cursor"];
@@ -169,7 +168,7 @@
     // display
     NSArray* display = @[@"inline",@"block",@"list-item",@"run-in",@"compact",@"marker",@"table",@"inline-block",@"inline-table",@"table-row-group",@"table-header-group",@"table-footer-group",@"table-row",@"table-column-group",@"table-column",@"table-cell",@"table-caption",@"none"];
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:display] forKey:@"display"];
-    
+
     // empty-cells
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"show",@"hide"]] forKey:@"empty-cells"];
 
@@ -181,7 +180,7 @@
 
     // font-size
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"xx-small", @"x-small", @"small", @"medium", @"large", @"x-large", @"xx-large", @"larger", @"smaller"]], [HTMLPurifier_AttrDef_CSS_Percentage new], [HTMLPurifier_AttrDef_CSS_Length new]]] forKey:@"font-size"];
-    
+
     // font-style
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"normal", @"italic", @"oblique"] caseSensitive:NO] forKey:@"font-style"];
 
@@ -190,11 +189,11 @@
 
     // font-weight
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"normal", @"bold", @"bolder", @"lighter", @"100", @"200", @"300", @"400", @"500", @"600", @"700", @"800", @"900"] caseSensitive:NO] forKey:@"font-weight"];
-    
+
     // line-height
     // is needed for multivalue element "font"
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"normal"]], [[HTMLPurifier_AttrDef_CSS_Number alloc] initWithNonNegative:YES], [[HTMLPurifier_AttrDef_CSS_Length alloc] initWithMin:@"0"], [[HTMLPurifier_AttrDef_CSS_Percentage alloc] initWithNonNegative:YES]]] forKey:@"line-height"];
-    
+
     // font
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Font alloc] initWithConfig:config] forKey:@"font"];
 
@@ -203,19 +202,19 @@
     NSNumber* max = (NSNumber*)[config get:@"CSS.MaxImgLength"];
     HTMLPurifier_AttrDef_CSS_Composite* composite = [[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_CSS_Length alloc] initWithMin:@"0" max:max], [[HTMLPurifier_AttrDef_CSS_Percentage alloc] initWithNonNegative:YES], [[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"auto"]]]];
     HTMLPurifier_AttrDef* maxLength = (max==nil) ? trusted_wh:[[HTMLPurifier_AttrDef_Switch alloc] initWithTag:@"img" withTag:composite withoutTag:trusted_wh];
-    
+
     // height
     [self.info setObject:maxLength forKey:@"height"];
 
     // left
     [self.info setObject:maxLength forKey:@"left"];
-    
+
     // letter-spacing
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"normal"]], [HTMLPurifier_AttrDef_CSS_Length new]]] forKey:@"letter-spacing"];
-    
+
     // line-height
     // see "font"
-    
+
     // list-style-image
     [self.info setObject:uri_or_none forKey:@"list-style-image"];
 
@@ -234,7 +233,7 @@
     [self.info setObject:margin forKey:@"margin-bottom"];
     [self.info setObject:margin forKey:@"margin-left"];
     [self.info setObject:margin forKey:@"margin-right"];
-    
+
     // margin
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Multiple alloc] initWithSingle:margin] forKey:@"margin"];
 
@@ -249,57 +248,57 @@
 
     // min-width
     [self.info setObject:maxLength forKey:@"min-width"];
-    
+
     // opacity
     [self.info setObject:[HTMLPurifier_AttrDef_CSS_AlphaValue new] forKey:@"opacity"];
 
     // orphans
     [self.info setObject:[HTMLPurifier_AttrDef_Integer new] forKey:@"orphans"];
-    
+
     // outline-color
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[HTMLPurifier_AttrDef_CSS_Color new],[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"invert"]]]] forKey:@"outline-color"];
-    
+
     // outline-style
     [self.info setObject:border_style forKey:@"outline-style"];
-    
+
     // outline-width
     [self.info setObject:border_width forKey:@"outline-width"];
 
     // outline
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Outline alloc] initWithConfig:config] forKey:@"outline"];
-    
+
     // overflow
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"visible",@"hidden",@"auto",@"scroll"]] forKey:@"overflow"];
-    
+
     // padding-top padding-right padding-bottom padding-left
     HTMLPurifier_AttrDef_CSS_Composite* padding = [[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_CSS_Length alloc] initWithMin:@"0"], [[HTMLPurifier_AttrDef_CSS_Percentage alloc] initWithNonNegative:YES]]];
     [self.info setObject:padding forKey:@"padding-top"];
     [self.info setObject:padding forKey:@"padding-bottom"];
     [self.info setObject:padding forKey:@"padding-left"];
     [self.info setObject:padding forKey:@"padding-right"];
-    
+
     // padding
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Multiple alloc] initWithSingle:padding] forKey:@"padding"];
 
     // page-break-after
     HTMLPurifier_AttrDef_Enum* page_break = [[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"auto",@"always",@"avoid",@"left",@"right"]];
     [self.info setObject:page_break forKey:@"page-break-after"];
-    
+
     // page-break-before
     [self.info setObject:page_break forKey:@"page-break-before"];
-    
+
     // page-break-inside
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"auto",@"avoid"]] forKey:@"page-break-inside"];
 
     // position
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"static",@"relative",@"absolute",@"fixed"]] forKey:@"position"];
-    
+
     // quotes
     // Value:  	[<string> <string>]+ | none
-    
+
     // right
     [self.info setObject:length_percentage_auto forKey:@"right"];
-    
+
     // table-layout
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"auto", @"fixed"]] forKey:@"table-layout"];
 
@@ -320,29 +319,29 @@
 
     // unicode-bidi
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"normal",@"embed",@"bidi-override"]] forKey:@"unicode-bidi"];
-    
+
     // vertical-align
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"baseline", @"sub", @"super", @"top", @"text-top", @"middle", @"bottom", @"text-bottom"]], [HTMLPurifier_AttrDef_CSS_Length new], [HTMLPurifier_AttrDef_CSS_Percentage new]]] forKey:@"vertical-align"];
-    
+
     // visibility
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"visible",@"hidden",@"collapse"]] forKey:@"visibility"];
-    
+
     // white-space
     [self.info setObject:[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"nowrap", @"normal", @"pre", @"pre-wrap", @"pre-line"]] forKey:@"white-space"];
 
     // widows
     [self.info setObject:[HTMLPurifier_AttrDef_Integer new] forKey:@"widows"];
-    
+
     // width
     [self.info setObject:maxLength forKey:@"width"];
-    
+
     // word-spacing
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[[HTMLPurifier_AttrDef_Enum alloc] initWithValidValues:@[@"normal"]], [HTMLPurifier_AttrDef_CSS_Length new]]] forKey:@"word-spacing"];
 
     // z-index
     [self.info setObject:[[HTMLPurifier_AttrDef_CSS_Composite alloc] initWithDefs:@[[HTMLPurifier_AttrDef_Integer new], _auto]] forKey:@"z-index"];
 
-    
+
     BOOL allow_important = [[config get:@"CSS.AllowImportant"] isEqual:@YES];
 
     // wrap all attr-defs with decorator that handles !important

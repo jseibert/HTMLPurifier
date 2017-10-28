@@ -15,14 +15,14 @@
  */
 
 #import "HTMLPurifier_URI.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_URIScheme.h"
-#import "HTMLPurifier_URIDefinition.h"
-#import "HTMLPurifier_URISchemeRegistry.h"
-#import "HTMLPurifier_AttrDef_URI_Host.h"
-#import "HTMLPurifier_PercentEncoder.h"
-#import "BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../URIScheme/HTMLPurifier_URIScheme.h"
+#import "../Definition/HTMLPurifier_URIDefinition.h"
+#import "../URIScheme/HTMLPurifier_URISchemeRegistry.h"
+#import "./AttrDef/HTMLPurifier_AttrDef_URI_Host.h"
+#import "../Parsing/HTMLPurifier_PercentEncoder.h"
+#import "../BasicPHP.h"
 
 
 @implementation HTMLPurifier_URI

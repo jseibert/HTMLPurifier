@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_HTMLModule_Presentation.h"
-#import "HTMLPurifier_ElementDef.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
 
 /**
  * XHTML 1.1 Presentation Module, defines simple presentation-related

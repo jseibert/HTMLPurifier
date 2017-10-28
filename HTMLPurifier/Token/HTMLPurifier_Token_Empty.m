@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Token_Empty.h"
-#import "HTMLPurifier_Node_ELement.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
 
 /**
  * Concrete empty token class.

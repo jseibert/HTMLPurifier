@@ -6,18 +6,18 @@
 
 
 #import "HTMLPurifier_Generator.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_HTMLDefinition.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Definition/HTMLPurifier_HTMLDefinition.h"
 #import "HTMLPurifier_Doctype.h"
-#import "HTMLPurifier_Token_End.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_Token_Empty.h"
-#import "HTMLPurifier_Token_Text.h"
-#import "HTMLPurifier_Token_Comment.h"
+#import "../Token/HTMLPurifier_Token_End.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_Empty.h"
+#import "../Token/HTMLPurifier_Token_Text.h"
+#import "../Token/HTMLPurifier_Token_Comment.h"
 #import "HTMLPurifier_FlashStackObject.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 
 #define ENT_NOQUOTES @"ENT_NOQUOTES"

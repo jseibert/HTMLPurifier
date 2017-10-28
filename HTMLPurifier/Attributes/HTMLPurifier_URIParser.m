@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_URIParser.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 #import "HTMLPurifier_URI.h"
-#import "HTMLPurifier_PercentEncoder.h"
+#import "../Parsing/HTMLPurifier_PercentEncoder.h"
 
 @implementation HTMLPurifier_URIParser
 

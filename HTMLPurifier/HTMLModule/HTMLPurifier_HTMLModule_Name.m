@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_HTMLModule_Name.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_AttrTransform_NameSync.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Attributes/AttrTransform/HTMLPurifier_AttrTransform_NameSync.h"
 
 @implementation HTMLPurifier_HTMLModule_Name
 

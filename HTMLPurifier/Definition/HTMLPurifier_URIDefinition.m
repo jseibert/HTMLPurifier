@@ -6,18 +6,18 @@
 
 
 #import "HTMLPurifier_URIDefinition.h"
-#import "HTMLPurifier_URI.h"
-#import "HTMLPurifier_URIFilter.h"
-#import "HTMLPurifier_URIFilter_DisableExternal.h"
-#import "HTMLPurifier_URIFilter_DisableExternalResources.h"
-#import "HTMLPurifier_URIFilter_HostBlacklist.h"
-#import "HTMLPurifier_URIFilter_MakeAbsolute.h"
-#import "HTMLPurifier_URIFilter_DisableResources.h"
-#import "HTMLPurifier_URIFilter_SafeIframe.h"
-#import "HTMLPurifier_URIFilter_Munge.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_URIParser.h"
-#import "HTMLPurifier_URISchemeRegistry.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../URIFilter/HTMLPurifier_URIFilter.h"
+#import "../URIFilter/HTMLPurifier_URIFilter_DisableExternal.h"
+#import "../URIFilter/HTMLPurifier_URIFilter_DisableExternalResources.h"
+#import "../URIFilter/HTMLPurifier_URIFilter_HostBlacklist.h"
+#import "../URIFilter/HTMLPurifier_URIFilter_MakeAbsolute.h"
+#import "../URIFilter/HTMLPurifier_URIFilter_DisableResources.h"
+#import "../URIFilter/HTMLPurifier_URIFilter_SafeIframe.h"
+#import "../URIFilter/HTMLPurifier_URIFilter_Munge.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Attributes/HTMLPurifier_URIParser.h"
+#import "../URIScheme/HTMLPurifier_URISchemeRegistry.h"
 
 
 @implementation HTMLPurifier_URIDefinition

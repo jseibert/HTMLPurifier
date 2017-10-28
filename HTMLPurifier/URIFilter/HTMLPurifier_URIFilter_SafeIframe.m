@@ -6,11 +6,11 @@
 
 
 #import "HTMLPurifier_URIFilter_SafeIframe.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_URI.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_Token.h"
-#import "BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../BasicPHP.h"
 
 /**
  * Implements safety checks for safe iframes.

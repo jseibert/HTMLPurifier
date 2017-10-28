@@ -7,8 +7,8 @@
 
 #import "HTMLPurifier_DoctypeRegistry.h"
 #import "HTMLPurifier_Doctype.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Config.h"
+#import "../BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 
 @implementation HTMLPurifier_DoctypeRegistry
 

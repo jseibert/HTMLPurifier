@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_HTMLModule_Tables.h"
-#import "HTMLPurifier_ChildDef_Tables.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef_Tables.h"
 
 /**
  * XHTML 1.1 Tables Module, fully defines accessible table elements.

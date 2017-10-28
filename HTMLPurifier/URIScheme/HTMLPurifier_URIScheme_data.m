@@ -5,11 +5,12 @@
 //  Created by Lukas Neumann on 19.01.14.
 
 
-
+#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 #import "HTMLPurifier_URIScheme_data.h"
-#import "HTMLPurifier_URI.h"
-#import "BasicPHP.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../BasicPHP.h"
 
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
@@ -23,11 +24,11 @@
 {
     self = [super init];
     super.browsable = @YES;
-    
+
     // this is actually irrelevant since we only write out the path
     // component
     super.may_omit_host = @YES;
-    
+
     return self;
 }
 
@@ -41,13 +42,13 @@
 {
     NSArray* result = explodeWithLimit(@",",[uri path], 2);
     BOOL is_base64 = NO;
-    
+
     NSString* charset = nil;
-    
+
     NSString* content_type = nil;
-    
+
     NSString* data = nil;
-    
+
     if ([result count] == 2)
     {
         NSString* metadata = result[0];
@@ -79,7 +80,7 @@
                 {
                     continue;
                 }// garbage
-                
+
                 content_type = cur;
             }
         }
@@ -104,32 +105,32 @@
     {
         raw_data = [data dataUsingEncoding:NSUTF8StringEncoding];
     }
-    
+
 
 
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 
     UIImage* imageIOS = [UIImage imageWithData:raw_data];
-    
+
     if (!imageIOS)
         return NO;
 
 #else
-    
+
     NSImage* image = [[NSImage alloc] initWithData:raw_data];
-    
+
     if (!image)
         return NO;
-    
+
     // Is image drawable?
     if(!image.isValid)
         return NO;
-    
+
 #endif
-    
+
     uint8_t firstByte;
     [raw_data getBytes:&firstByte length:1];
-    
+
     //get the real content_type
     switch (firstByte) {
             case 0xFF:

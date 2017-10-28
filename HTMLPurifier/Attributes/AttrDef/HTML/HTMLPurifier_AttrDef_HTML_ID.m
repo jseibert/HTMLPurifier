@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_AttrDef_HTML_ID.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_IDAccumulator.h"
+#import "../BasicPHP.h"
+#import "../../../Parsing/HTMLPurifier_IDAccumulator.h"
 
 /**
  * Validates the HTML attribute ID.

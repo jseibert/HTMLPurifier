@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_ChildDef_List.h"
-#import "HTMLPurifier_Node.h"
-#import "HTMLPurifier_Node_Element.h"
+#import "../Node/HTMLPurifier_Node.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
 
 /**
  * Definition for list containers ul and ol.

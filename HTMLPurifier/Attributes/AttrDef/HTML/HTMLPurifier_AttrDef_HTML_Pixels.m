@@ -10,7 +10,7 @@
  * Validates an integer representation of pixels according to the HTML spec.
  */
 #import "HTMLPurifier_AttrDef_HTML_Pixels.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_HTML_Pixels
 

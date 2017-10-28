@@ -10,7 +10,7 @@
  * Decorator which enables CSS properties to be disabled for specific elements.
  */
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @interface HTMLPurifier_AttrDef_CSS_DenyElementDecorator : HTMLPurifier_AttrDef
 

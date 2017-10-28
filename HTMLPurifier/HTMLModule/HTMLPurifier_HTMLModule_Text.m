@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_HTMLModule_Text.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_ElementDef.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
 
 
 /**

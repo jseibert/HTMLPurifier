@@ -6,11 +6,11 @@
 
 
 #import "HTMLPurifier_ChildDef_StrictBlockquote.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_HTMLDefinition.h"
-#import "HTMLPurifier_Node.h"
-#import "HTMLPurifier_Node_Text.h"
-#import "HTMLPurifier_Node_Element.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Definition/HTMLPurifier_HTMLDefinition.h"
+#import "../Node/HTMLPurifier_Node.h"
+#import "../Node/HTMLPurifier_Node_Text.h"
+#import "../Node/HTMLPurifier_Node_Element.h"
 
 /**
  * Takes the contents of blockquote when in strict and reformats for validation.

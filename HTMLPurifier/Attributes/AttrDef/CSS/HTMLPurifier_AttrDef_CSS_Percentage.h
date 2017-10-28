@@ -5,7 +5,7 @@
 //  Created by Roman Priebe on 11.01.14.
 
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @class HTMLPurifier_AttrDef_CSS_Number, HTMLPurifier_Config, HTMLPurifier_Context;
 

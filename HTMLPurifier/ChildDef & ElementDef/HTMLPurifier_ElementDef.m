@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_ElementDef.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 #import "HTMLPurifier_ChildDef.h"
 
 @implementation HTMLPurifier_ElementDef

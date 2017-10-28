@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrTransform_Name.h"
-#import "HTMLPurifier_config.h"
+#import "../../Config & Context/HTMLPurifier_Config.h"
 
 /**
  * Pre-transform that changes deprecated name attribute to ID if necessary

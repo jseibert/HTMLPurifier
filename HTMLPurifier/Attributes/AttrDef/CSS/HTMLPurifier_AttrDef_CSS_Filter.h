@@ -5,8 +5,8 @@
 //  Created by Lukas Neumann on 15.01.14.
 
 
-#import "HTMLPurifier_AttrDef.h"
-#import "HTMLPurifier_AttrDef_Integer.h"
+#import "../HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef_Integer.h"
 
 /**
  * Microsoft's proprietary filter: CSS property

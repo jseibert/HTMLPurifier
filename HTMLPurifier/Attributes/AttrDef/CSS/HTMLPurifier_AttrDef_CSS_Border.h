@@ -5,7 +5,7 @@
 //  Created by Roman Priebe on 11.01.14.
 
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @interface HTMLPurifier_AttrDef_CSS_Border : HTMLPurifier_AttrDef
 /**

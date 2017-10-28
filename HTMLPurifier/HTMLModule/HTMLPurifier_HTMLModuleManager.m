@@ -6,19 +6,18 @@
 
 
 #import "HTMLPurifier_HTMLModuleManager.h"
-#import "HTMLPurifier_Doctype.h"
-#import "HTMLPurifier_DoctypeRegistry.h"
+#import "../Parsing/HTMLPurifier_Doctype.h"
+#import "../Parsing/HTMLPurifier_DoctypeRegistry.h"
 #import "HTMLPurifier_HTMLModule.h"
-#import "HTMLPurifier_Injector.h"
-#import "HTMLPurifier_AttrTypes.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_HTMLModule.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_ContentSets.h"
-#import "HTMLPurifier_AttrCollections.h"
-#import "HTMLPurifier_AttrDef.h"
+#import "../Injector/HTMLPurifier_Injector.h"
+#import "../Attributes/HTMLPurifier_AttrTypes.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_ContentSets.h"
+#import "../Attributes/HTMLPurifier_AttrCollections.h"
+#import "../Attributes/AttrDef/HTMLPurifier_AttrDef.h"
 
 
 
@@ -139,7 +138,7 @@
 {
     if (!module || !config)
         return;
-    
+
     [self registerModule:module withConfig:config];
     if ([module isKindOfClass:[HTMLPurifier_HTMLModule class]])
     {

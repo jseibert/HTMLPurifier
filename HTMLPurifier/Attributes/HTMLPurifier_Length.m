@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_Length.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_AttrDef_CSS_Number.h"
+#import "../BasicPHP.h"
+#import "./AttrDef/CSS/HTMLPurifier_AttrDef_CSS_Number.h"
 #import "HTMLPurifier_UnitConverter.h"
 
 @implementation HTMLPurifier_Length

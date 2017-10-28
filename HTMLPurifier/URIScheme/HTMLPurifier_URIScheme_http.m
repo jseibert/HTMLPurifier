@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_URIScheme_http.h"
-#import "HTMLPurifier_URI.h"
+#import "../Attributes/HTMLPurifier_URI.h"
 
 /**
  * Validates http (HyperText Transfer Protocol) as defined by RFC 2616

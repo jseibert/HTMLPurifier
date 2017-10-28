@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_AttrDef_CSS_FontFamily.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
+#import "../BasicPHP.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 @implementation HTMLPurifier_AttrDef_CSS_FontFamily
 

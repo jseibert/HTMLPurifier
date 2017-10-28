@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_HTMLModule_Tidy_XHTML.h"
-#import "HTMLPurifier_AttrTransform_Lang.h"
+#import "../Attributes/AttrTransform/HTMLPurifier_AttrTransform_Lang.h"
 
 
 

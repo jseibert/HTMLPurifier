@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_HTMLModule.h"
-#import "HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 
 @interface HTMLPurifier_HTMLModule_Bdo : HTMLPurifier_HTMLModule
 

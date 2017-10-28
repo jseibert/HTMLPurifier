@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_URIScheme_file.h"
-#import "HTMLPurifier_URI.h"
+#import "../Attributes/HTMLPurifier_URI.h"
 
 /**
  * Validates file as defined by RFC 1630 and RFC 1738.

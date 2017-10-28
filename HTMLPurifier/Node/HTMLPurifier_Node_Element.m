@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_Node_Element.h"
-#import "HTMLPurifier_Token_Empty.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_Token_End.h"
+#import "../Token/HTMLPurifier_Token_Empty.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_End.h"
 
 @implementation HTMLPurifier_Node_Element
 

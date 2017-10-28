@@ -5,7 +5,7 @@
 //  Created by Lukas Neumann on 11.01.14.
 
 
-#import "HTMLPurifier_AttrDef_Enum.h"
+#import "../HTMLPurifier_AttrDef_Enum.h"
 
 @interface HTMLPurifier_AttrDef_HTML_FrameTarget : HTMLPurifier_AttrDef_Enum
 

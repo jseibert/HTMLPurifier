@@ -7,12 +7,12 @@
 //
 
 #import "HTMLPurifier_AttrDef_CSS_BorderRadius.h"
-#import "HTMLPurifier_AttrDef_Enum.h"
+#import "../HTMLPurifier_AttrDef_Enum.h"
 #import "HTMLPurifier_AttrDef_CSS_Composite.h"
 #import "HTMLPurifier_AttrDef_CSS_Length.h"
 #import "HTMLPurifier_AttrDef_CSS_Percentage.h"
 #import "HTMLPurifier_AttrDef_CSS_Multiple.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 
 @implementation HTMLPurifier_AttrDef_CSS_BorderRadius

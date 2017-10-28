@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_HTMLModule_Legacy.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_AttrDef_Integer.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Attributes/AttrDef/HTMLPurifier_AttrDef_Integer.h"
 
 /**
  * XHTML 1.1 Legacy module defines elements that were previously

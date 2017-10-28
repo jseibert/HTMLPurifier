@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_HTMLModule_Tidy.h"
-#import "HTMLPurifier_Config.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_ElementDef.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../BasicPHP.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
 
 
 

@@ -4,6 +4,8 @@
 //
 //  Created by Roman Priebe on 18.01.14.
 
+#import <Foundation/Foundation.h>
+
 
 @class HTMLPurifier_Length;
 

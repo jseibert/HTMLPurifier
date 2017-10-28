@@ -6,11 +6,11 @@
 
 
 #import "HTMLPurifier_HTMLModule_Image.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_AttrDef_URI.h"
-#import "HTMLPurifier_AttrTransform_ImgRequired.h"
-#import "HTMLPurifier_AttrTransform_ImgTrackingRemoval.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Attributes/AttrDef/HTMLPurifier_AttrDef_URI.h"
+#import "../Attributes/AttrTransform/HTMLPurifier_AttrTransform_ImgRequired.h"
+#import "../Attributes/AttrTransform/HTMLPurifier_AttrTransform_ImgTrackingRemoval.h"
 
 @implementation HTMLPurifier_HTMLModule_Image
 

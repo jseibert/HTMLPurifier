@@ -6,14 +6,14 @@
 
 
 #import "HTMLPurifier_ContentSets.h"
-#import "HTMLPurifier_HTMLModule.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_ChildDef_Optional.h"
-#import "HTMLPurifier_ChildDef_Custom.h"
-#import "HTMLPurifier_ChildDef_Required.h"
-#import "HTMLPurifier_ChildDef_Empty.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_ChildDef.h"
+#import "../HTMLModule/HTMLPurifier_HTMLModule.h"
+#import "../BasicPHP.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef_Optional.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef_Custom.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef_Required.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef_Empty.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef.h"
 
 
 

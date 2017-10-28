@@ -6,16 +6,15 @@
 
 
 #import "HTMLPurifier_Lexer_libxmlLex.h"
-#import "HTMLPurifier_TokenFactory.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_TokenFactory.h"
+#import "../Token/HTMLPurifier_TokenFactory.h"
+#import "../BasicPHP.h"
 #import <libxml/HTMLparser.h>
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 #import "HTMLPurifier_Queue.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_HTMLDefinition.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Definition/HTMLPurifier_HTMLDefinition.h"
 #import "HTMLPurifier_Doctype.h"
 #import "HTMLPurifier_DOMNode.h"
 
@@ -69,7 +68,7 @@
 
         html = [BasicPHP pregReplace:comment callback:^(NSArray* array){ return [self callbackUndoCommentSubst:array]; } haystack:html]; // fix comments
     }
-    
+
     //extracts only the part in the body and transforms body to div (then we'll keep style attributes in from the body)
     html = [super extractBodyWithHtml:html];
 
@@ -344,7 +343,7 @@
         }
         else
             TRIGGER_ERROR(@"Parse error: no children");
-        
+
         properties = properties->next;
     }
     return @[propertiesLookup, sortOrder];
@@ -382,7 +381,7 @@
 - (NSString*)wrapHTML:(NSString*)html config:(HTMLPurifier_Config*)config context:(HTMLPurifier_Context*)context
 {
     HTMLPurifier_HTMLDefinition* def = (HTMLPurifier_HTMLDefinition*)[config getDefinition:@"HTML"];
-    
+
     NSMutableString* ret = [NSMutableString new];
     if ([[def doctype] dtdPublic] || [[def doctype] dtdSystem]) {
         [ret appendString:@"<!DOCTYPE html "];

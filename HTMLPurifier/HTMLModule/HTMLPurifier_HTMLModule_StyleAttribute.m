@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_HTMLModule_StyleAttribute.h"
-#import "HTMLPurifier_AttrDef_CSS.h"
+#import "../Attributes/AttrDef/CSS/HTMLPurifier_AttrDef_CSS.h"
 
 /**
  * XHTML 1.1 Edit Module, defines editing-related elements. Text Extension

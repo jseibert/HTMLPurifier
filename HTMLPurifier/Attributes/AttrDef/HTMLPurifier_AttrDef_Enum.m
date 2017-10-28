@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrDef_Enum.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_Enum
 

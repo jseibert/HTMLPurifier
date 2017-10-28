@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_URIScheme_nntp.h"
-#import "HTMLPurifier_URI.h"
+#import "../Attributes/HTMLPurifier_URI.h"
 
 /**
  * Validates nntp (Network News Transfer Protocol) as defined by generic RFC 1738

@@ -7,7 +7,7 @@
 
 #import "HTMLPurifier_AttrDef_HTML_LinkTypes.h"
 #import "HTMLPurifier.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_HTML_LinkTypes
 

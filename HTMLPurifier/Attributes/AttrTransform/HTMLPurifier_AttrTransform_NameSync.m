@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrTransform_NameSync.h"
-#import "HTMLPurifier_AttrDef_HTML_ID.h"
+#import "../AttrDef/HTML/HTMLPurifier_AttrDef_HTML_ID.h"
 
 
 /**

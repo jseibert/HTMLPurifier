@@ -5,7 +5,7 @@
 //  Created by Roman Priebe on 11.01.14.
 
 
-#import "HTMLPurifier_AttrDef_URI.h"
+#import "../HTMLPurifier_AttrDef_URI.h"
 
 @interface HTMLPurifier_AttrDef_CSS_URI : HTMLPurifier_AttrDef_URI
 

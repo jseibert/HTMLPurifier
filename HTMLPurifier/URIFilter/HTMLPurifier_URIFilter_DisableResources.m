@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_URIFilter_DisableResources.h"
-#import "HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 
 @implementation HTMLPurifier_URIFilter_DisableResources
 

@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_PropertyList.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 
 #define BUNDLE (NSClassFromString(@"HTMLPurifierTests")!=nil)?[NSBundle bundleForClass:[NSClassFromString(@"HTMLPurifierTests") class]]:[NSBundle bundleForClass:[NSClassFromString(@"HTMLPurifier") class]]

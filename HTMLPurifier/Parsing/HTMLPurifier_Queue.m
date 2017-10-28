@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Queue.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_Queue
 

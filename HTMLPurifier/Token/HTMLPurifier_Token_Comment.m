@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Token_Comment.h"
-#import "HTMLPurifier_Node_Comment.h"
+#import "../Node/HTMLPurifier_Node_Comment.h"
 
 @implementation HTMLPurifier_Token_Comment
 

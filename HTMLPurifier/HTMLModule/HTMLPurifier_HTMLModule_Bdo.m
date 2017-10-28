@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_HTMLModule_Bdo.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_AttrTransform_BdoDir.h"
-#import "HTMLPurifier_ElementDef.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Attributes/AttrTransform/HTMLPurifier_AttrTransform_BdoDir.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
 
 
 /**

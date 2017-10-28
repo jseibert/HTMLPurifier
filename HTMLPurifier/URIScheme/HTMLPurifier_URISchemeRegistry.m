@@ -11,8 +11,8 @@
  */
 
 #import "HTMLPurifier_URISchemeRegistry.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 #import "HTMLPurifier_URIScheme.h"
 
 

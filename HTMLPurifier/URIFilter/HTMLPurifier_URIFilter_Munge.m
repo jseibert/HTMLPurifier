@@ -6,14 +6,14 @@
 
 
 #import "HTMLPurifier_URIFilter_Munge.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_URIParser.h"
-#import "HTMLPurifier_URI.h"
-#import "HTMLPurifier_URIScheme.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_PercentEncoder.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Attributes/HTMLPurifier_URIParser.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../URIScheme/HTMLPurifier_URIScheme.h"
+#import "../BasicPHP.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Parsing/HTMLPurifier_PercentEncoder.h"
 
 @implementation HTMLPurifier_URIFilter_Munge
 

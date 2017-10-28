@@ -4,6 +4,7 @@
 //
 //  Created by Roman Priebe on 13.01.14.
 
+#import <Foundation/Foundation.h>
 
 /**
  * A zipper is a purely-functional data structure which contains
@@ -22,7 +23,7 @@
  * Nota bene: the current class gets confused if you try to store NULLs
  * in the list.
  */
-@interface HTMLPurifier_Zipper : NSObject 
+@interface HTMLPurifier_Zipper : NSObject
 
 
 

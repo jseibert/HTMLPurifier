@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_Token_Text.h"
-#import "HTMLPurifier_Node_Text.h"
-#import "BasicPHP.h"
+#import "../Node/HTMLPurifier_Node_Text.h"
+#import "../BasicPHP.h"
 
 @implementation HTMLPurifier_Token_Text
 

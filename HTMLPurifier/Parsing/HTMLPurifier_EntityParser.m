@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_EntityParser.h"
-#import "BasicPHP.h"
+#import "../BasicPHP.h"
 #import "HTMLPurifier_Encoder.h"
 #import "HTMLPurifier_EntityLookup.h"
 

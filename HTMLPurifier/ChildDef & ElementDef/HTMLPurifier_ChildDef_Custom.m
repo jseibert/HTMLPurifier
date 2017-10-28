@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_ChildDef_Custom.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_Node.h"
+#import "../BasicPHP.h"
+#import "../Node/HTMLPurifier_Node.h"
 
 @implementation HTMLPurifier_ChildDef_Custom
 

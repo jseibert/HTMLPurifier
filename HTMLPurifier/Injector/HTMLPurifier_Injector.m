@@ -6,16 +6,16 @@
 
 
 #import "HTMLPurifier_Injector.h"
-#import "HTMLPurifier_Token.h"
-#import "HTMLPurifier_Config.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_Zipper.h"
-#import "HTMLPurifier_HTMLDefinition.h"
-#import "BasicPHP.h"
-#import "HTMLPurifier_ElementDef.h"
-#import "HTMLPurifier_Token_Start.h"
-#import "HTMLPurifier_Token_End.h"
-#import "HTMLPurifier_ChildDef.h"
+#import "../Token/HTMLPurifier_Token.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Parsing/HTMLPurifier_Zipper.h"
+#import "../Definition/HTMLPurifier_HTMLDefinition.h"
+#import "../BasicPHP.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ElementDef.h"
+#import "../Token/HTMLPurifier_Token_Start.h"
+#import "../Token/HTMLPurifier_Token_End.h"
+#import "../ChildDef & ElementDef/HTMLPurifier_ChildDef.h"
 
 @implementation HTMLPurifier_Injector
 

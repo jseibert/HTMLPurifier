@@ -6,9 +6,9 @@
 
 
 #import "HTMLPurifier_URIFilter.h"
-#import "HTMLPurifier_URI.h"
-#import "HTMLPurifier_Context.h"
-#import "HTMLPurifier_Config.h"
+#import "../Attributes/HTMLPurifier_URI.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../Config & Context/HTMLPurifier_Config.h"
 
 @implementation HTMLPurifier_URIFilter
 

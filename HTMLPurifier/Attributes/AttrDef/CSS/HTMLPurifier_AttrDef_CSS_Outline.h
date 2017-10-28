@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Mynigma. All rights reserved.
 //
 
-#import "HTMLPurifier_AttrDef.h"
+#import "../HTMLPurifier_AttrDef.h"
 
 @interface HTMLPurifier_AttrDef_CSS_Outline : HTMLPurifier_AttrDef
 
