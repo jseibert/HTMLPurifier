@@ -147,7 +147,7 @@ static HTMLPurifier_ConfigSchema* theSingleton;
         if(!configPlistPath)
         {
             NSLog(@"Error opening config plist file!!! Please include either 'HTMLPurifierCustomConfig.plist' in main bundle or 'HTMLPurifierConfig.plist' in bundle: %@", [NSBundle bundleForClass:[self class]]);
-            return;
+            return nil;
         }
         
         [self actuallyReadPlist: configPlistPath];
