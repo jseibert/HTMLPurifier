@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_AttrDef_HTML_Class.h"
-#import "../BasicPHP.h"
-#import "../Definition/HTMLPurifier_HTMLDefinition.h"
+#import "../../../BasicPHP.h"
+#import "../../../Definition/HTMLPurifier_HTMLDefinition.h"
 #import "../../../Parsing/HTMLPurifier_Doctype.h"
 
 /**

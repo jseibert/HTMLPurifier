@@ -18,7 +18,7 @@
 
 
 #import "HTMLPurifier_Encoder.h"
-#import "HTMLPurifier.h"
+#import "../include/HTMLPurifier.h"
 #import "../BasicPHP.h"
 #import "../Config & Context/HTMLPurifier_Config.h"
 

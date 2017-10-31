@@ -8,7 +8,7 @@
 #import "HTMLPurifier_AttrTransform_TargetBlank.h"
 #import "../HTMLPurifier_URIParser.h"
 #import "../HTMLPurifier_URI.h"
-#import "../URIScheme/HTMLPurifier_URIScheme.h"
+#import "../../URIScheme/HTMLPurifier_URIScheme.h"
 
 /**
  * Adds target="blank" to all outbound links.  This transform is

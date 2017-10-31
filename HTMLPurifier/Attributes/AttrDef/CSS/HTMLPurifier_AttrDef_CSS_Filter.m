@@ -7,7 +7,7 @@
 
 #import "HTMLPurifier_AttrDef_CSS_Filter.h"
 #import "../HTMLPurifier_AttrDef_Integer.h"
-#import "../BasicPHP.h"
+#import "../../../BasicPHP.h"
 
 /**
  * Microsoft's proprietary filter: CSS property

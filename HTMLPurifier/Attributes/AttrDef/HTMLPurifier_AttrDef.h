@@ -6,8 +6,8 @@
 
 
 #import <Foundation/Foundation.h>
-#import "../Config & Context/HTMLPurifier_Config.h"
-#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../../Config & Context/HTMLPurifier_Config.h"
+#import "../../Config & Context/HTMLPurifier_Context.h"
 
 @interface HTMLPurifier_AttrDef : NSObject
 

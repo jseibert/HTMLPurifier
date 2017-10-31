@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_AttrDef_CSS_Percentage.h"
-#import "../Config & Context/HTMLPurifier_Config.h"
-#import "../Config & Context/HTMLPurifier_Context.h"
+#import "../../../Config & Context/HTMLPurifier_Config.h"
+#import "../../../Config & Context/HTMLPurifier_Context.h"
 #import "HTMLPurifier_AttrDef_CSS_Number.h"
 
 

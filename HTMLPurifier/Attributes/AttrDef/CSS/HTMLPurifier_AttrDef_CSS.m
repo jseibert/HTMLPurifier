@@ -16,7 +16,7 @@
  *       but would make these components a lot more viable for a CSS
  *       filtering solution.
  */
-#import "../BasicPHP.h"
+#import "../../../BasicPHP.h"
 #import "HTMLPurifier_AttrDef_CSS.h"
 #import "../../../Definition/HTMLPurifier_CSSDefinition.h"
 

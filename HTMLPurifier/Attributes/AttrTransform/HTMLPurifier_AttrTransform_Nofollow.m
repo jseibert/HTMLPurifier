@@ -8,8 +8,8 @@
 #import "HTMLPurifier_AttrTransform_Nofollow.h"
 #import "../HTMLPurifier_URIParser.h"
 #import "../HTMLPurifier_URI.h"
-#import "../URIScheme/HTMLPurifier_URIScheme.h"
-#import "../BasicPHP.h"
+#import "../../URIScheme/HTMLPurifier_URIScheme.h"
+#import "../../BasicPHP.h"
 
 /**
  * Adds rel="nofollow" to all outbound links.  This transform is

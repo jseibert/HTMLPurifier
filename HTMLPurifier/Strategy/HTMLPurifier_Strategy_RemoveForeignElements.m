@@ -86,7 +86,7 @@
             // DEFINITION CALL
 
             NSString* tokenName = token.name;
-
+            
             // before any processing, try to transform the element
             NSMutableDictionary* deprecatedTagNameTransforms = definition.info_tag_transform;
 

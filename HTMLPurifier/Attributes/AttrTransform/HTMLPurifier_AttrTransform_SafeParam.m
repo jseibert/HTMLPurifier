@@ -8,7 +8,7 @@
 #import "HTMLPurifier_AttrTransform_SafeParam.h"
 #import "../AttrDef/HTMLPurifier_AttrDef_URI.h"
 #import "../AttrDef/HTMLPurifier_AttrDef_Enum.h"
-#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../../Config & Context/HTMLPurifier_Config.h"
 
 /**
  * Validates name/value pairs in param tags to be used in safe objects. This

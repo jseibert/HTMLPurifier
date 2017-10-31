@@ -7,9 +7,9 @@
 //
 
 #import "HTMLPurifier_AttrTransform_ImgTrackingRemoval.h"
-#import "../Config & Context/HTMLPurifier_Context.h"
-#import "../Config & Context/HTMLPurifier_Config.h"
-#import "../BasicPHP.h"
+#import "../../Config & Context/HTMLPurifier_Context.h"
+#import "../../Config & Context/HTMLPurifier_Config.h"
+#import "../../BasicPHP.h"
 
 
 /**

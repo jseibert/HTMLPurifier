@@ -26,8 +26,9 @@
 
 
 #import <Foundation/Foundation.h>
+#import "../Config & Context/HTMLPurifier_Context.h"
 
-@class HTMLPurifier_Config,HTMLPurifier_Strategy_Core,HTMLPurifier_Generator,HTMLPurifier_Context,HTMLPurifier_Filter,HTMLPurifier_Lexer,HTMLPurifier_LanguageFactory,HTMLPurifier_Language,HTMLPurifier_ErrorCollector,HTMLPurifier_IDAccumulator;
+@class HTMLPurifier_Config,HTMLPurifier_Strategy_Core,HTMLPurifier_Generator,HTMLPurifier_Filter,HTMLPurifier_Lexer,HTMLPurifier_LanguageFactory,HTMLPurifier_Language,HTMLPurifier_ErrorCollector,HTMLPurifier_IDAccumulator;
 
 #define VERSION @"0.1"
 

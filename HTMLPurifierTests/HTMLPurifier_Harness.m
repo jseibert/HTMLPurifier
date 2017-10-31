@@ -10,7 +10,7 @@
 #import "HTMLPurifier_Config.h"
 #import "HTMLPurifier_Context.h"
 #import "HTMLPurifier_ConfigSchema.h"
-#import "HTMLPurifier.h"
+#import "../HTMLPurifier/include/HTMLPurifier.h"
 #import "BasicPHP.h"
 
 

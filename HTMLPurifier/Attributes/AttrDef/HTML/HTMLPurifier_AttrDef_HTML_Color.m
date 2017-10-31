@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrDef_HTML_Color.h"
-#import "../BasicPHP.h"
+#import "../../../BasicPHP.h"
 
 @implementation HTMLPurifier_AttrDef_HTML_Color
 

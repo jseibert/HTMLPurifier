@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_Token.h"
-#import "HTMLPurifier.h"
+#import "../include/HTMLPurifier.h"
 #import "../BasicPHP.h"
 #import "../Node/HTMLPurifier_Node.h"
 #import "HTMLPurifier_Token_Empty.h"

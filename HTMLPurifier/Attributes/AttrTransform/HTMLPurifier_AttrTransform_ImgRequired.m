@@ -6,8 +6,8 @@
 
 
 #import "HTMLPurifier_AttrTransform_ImgRequired.h"
-#import "../Config & Context/HTMLPurifier_Context.h"
-#import "../Config & Context/HTMLPurifier_Config.h"
+#import "../../Config & Context/HTMLPurifier_Context.h"
+#import "../../Config & Context/HTMLPurifier_Config.h"
 
 // must be called POST validation
 

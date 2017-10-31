@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrDef_CSS_BackgroundPosition.h"
-#import "../BasicPHP.h"
+#import "../../../BasicPHP.h"
 #import "HTMLPurifier_AttrDef_CSS_Percentage.h"
 #import "HTMLPurifier_AttrDef_CSS_Length.h"
 

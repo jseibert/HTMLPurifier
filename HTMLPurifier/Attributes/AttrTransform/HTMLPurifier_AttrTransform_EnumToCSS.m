@@ -6,7 +6,7 @@
 
 
 #import "HTMLPurifier_AttrTransform_EnumToCSS.h"
-#import "../BasicPHP.h"
+#import "../../BasicPHP.h"
 
 /**
  * Generic pre-transform that converts an attribute with a fixed number of

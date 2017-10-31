@@ -15,7 +15,7 @@
 #import "HTMLPurifier_Arborize.h"
 #import "HTMLPurifier_Node.h"
 #import "HTMLPurifier_Node_Element.h"
-#import "HTMLPurifier.h"
+#import "../HTMLPurifier/include/HTMLPurifier.h"
 
 @interface HTMLPurifier_Strategy_MakeWellFormedTest : HTMLPurifier_Harness
 {

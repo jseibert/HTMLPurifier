@@ -7,7 +7,7 @@
 
 #import "HTMLPurifier_AttrDef_CSS_Border.h"
 #import "../../../Definition/HTMLPurifier_CSSDefinition.h"
-#import "../BasicPHP.h"
+#import "../../../BasicPHP.h"
 
 
 @implementation HTMLPurifier_AttrDef_CSS_Border
