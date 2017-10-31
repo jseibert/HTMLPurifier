@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "HTMLPurifier_Harness.h"
-#import "HTMLPurifier.h"
+#import "../HTMLPurifier/include/HTMLPurifier.h"
 #import "HTMLPurifier_Config.h"
 #import "HTMLPurifier_Context.h"
 
@@ -197,7 +197,7 @@ NSLog(@"Output: %@", cleanedHTML);
 -(void) testOutlookHTML1
 {
     NSString* html = @"<p class=MsoNormal><span lang=DE>Was Freitagabend abseits der Tagesordnung noch geschah&#8230;<o:p></o:p></span></p>";
-    NSString* correct = @"<p class=\"MsoNormal\"><span lang=\"de\" xml:lang=\"de\">Was Freitagabend abseits der Tagesordnung noch geschah…</span></p><p></p>";
+    NSString* correct = @"<p class=\"MsoNormal\"><span lang=\"de\" xml:lang=\"de\">Was Freitagabend abseits der Tagesordnung noch geschah…</span></p>";
     
     NSString* result = [purifier purify:html];
     
@@ -208,7 +208,7 @@ NSLog(@"Output: %@", cleanedHTML);
 {
     NSString* html = @"<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span lang=DE style='font-family:Wingdings'><span style='mso-list:Ignore'>§<span style='font:7.0pt \"Times New Roman\"'>&nbsp; </span></span></span><![endif]><span lang=DE>Text<o:p></o:p></span></p>";
 
-    NSString* correct = @"<p class=\"MsoListParagraph\" style=\"text-indent:-18.0pt;\"><span lang=\"de\" style=\"font-family:Wingdings;\" xml:lang=\"de\"><span>§<span style=\"font:7.0pt 'times new roman';\">  </span></span></span><span lang=\"de\" xml:lang=\"de\">Text</span></p><p></p>";
+    NSString* correct = @"<p class=\"MsoListParagraph\" style=\"text-indent:-18.0pt;\"><span lang=\"de\" style=\"font-family:Wingdings;\" xml:lang=\"de\"><span>§<span style=\"font:7.0pt 'times new roman';\">  </span></span></span><span lang=\"de\" xml:lang=\"de\">Text</span></p>";
     NSString* result = [purifier purify:html];
     
     XCTAssertEqualObjects(result, correct);

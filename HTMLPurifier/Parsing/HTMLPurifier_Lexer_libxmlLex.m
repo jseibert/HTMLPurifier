@@ -148,10 +148,22 @@
     HTMLPurifier_DOMNode* domNode = [HTMLPurifier_DOMNode new];
     if(node->content)
         [domNode setContent:[NSString stringWithCString:(char*)node->content encoding:NSUTF8StringEncoding]];
-    if(node->name)
-        [domNode setName:[NSString stringWithCString:(char*)node->name encoding:NSUTF8StringEncoding]];
+    
+    if(node->name) {
+        NSString *tagName = [NSString stringWithCString:(char*)node->name encoding:NSUTF8StringEncoding];
+        
+        if (node->nsDef && node->nsDef->prefix) {
+            NSString *prefix = [NSString stringWithCString:(char*)node->nsDef->prefix encoding:NSUTF8StringEncoding];
+            
+            tagName = [NSString stringWithFormat:@"%@:%@", prefix, tagName];
+        }
+
+        [domNode setName: tagName];
+    }
+    
     if(node->type)
         [domNode setType:node->type];
+    
     if(node->properties)
     {
         NSArray* pair = [self transformAttrToAssoc:node->properties];
