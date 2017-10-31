@@ -5,6 +5,7 @@
 //  Created by Lukas Neumann on 14.02.14.
 
 #import "HTMLPurifier_URIScheme_cid.h"
+#import "../Config & Context/HTMLPurifier_Context.h"
 #import "../Attributes/HTMLPurifier_URI.h"
 #import "../BasicPHP.h"
 
@@ -40,6 +41,14 @@
     [uri setPort:nil];
     [uri setQuery:nil];
     [uri setFragment:nil];
+    
+    if ([context existsWithName:@"foundCIDs"]) {
+        NSMutableArray *foundCIDs = (NSMutableArray *)[context getWithName:@"foundCIDs"];
+        [foundCIDs addObject:uri.path];
+    } else {
+        NSMutableArray *foundCIDs = [NSMutableArray arrayWithObject:uri.path];
+        [context registerWithName:@"foundCIDs" ref:foundCIDs];
+    }
     
     if ([uri path].length > 0)
     {
